@@ -3,10 +3,19 @@ const userChoice = prompt("Enter Your Choice: Rock, Paper or Scissor");
 //Take computer Input
 const gameChoices = ["rock", "paper", "scissor"];
 const computerChoice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
+//Print choices
+function gameOutput() {
+    console.log("You chose " + userChoice + " & Computer chose " + computerChoice);
+}
+
 //Create function to pass user and computer input
 function getWinner(userChoice, computerChoice) {
+    //Invalid Choice
+    if (userChoice != "rock" && userChoice != "paper" && userChoice != "scissor")
+        console.log("Enter a valid choice");
+
     //Tie Breaker
-    if (userChoice == computerChoice) {
+    else if (userChoice == computerChoice) {
         console.log("It's a tie");
     }
     //User chooses rock
@@ -30,16 +39,15 @@ function getWinner(userChoice, computerChoice) {
         else
             console.log("You win. Scissor beats paper");
     }
-
-    else
-        console.log("Your choice is not valid")
 }
 
 
 
-//Return the output
-console.log("You chose " + userChoice + " & Computer chose " + computerChoice);
+//Run the game
+gameOutput();
 getWinner(userChoice, computerChoice);
+
+
 
 
 
