@@ -1,5 +1,5 @@
 //Take user Input
-const userChoice = str.toLowerCase(prompt("Enter Your Choice: Rock, Paper or Scissor"));
+const userChoice = prompt("Enter Your Choice: Rock, Paper or Scissor").toLowerCase();
 //Take computer Input
 const gameChoices = ["rock", "paper", "scissor"];
 const computerChoice = gameChoices[Math.floor(Math.random() * gameChoices.length)];
